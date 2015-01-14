@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="col-sm-4">
+		<label>City: </label>
+		<input class="form-control" type="text" ng-model="mvc.params.city">
+		<label>State: </label>
+		<input class="form-control" type="text" ng-model="mvc.params.state">
+		<button class="btn btn-success btn-block" ng-click="mvc.getStations(mvc.params)">Get Alternative Fuel Stations</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-4" ng-repeat="station in mvc.stations">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<p>{{station.station_name}}</p>
+				<p>{{station.street_address}}</p>
+				<p>{{station.city}}, {{station.state}}  {{station.zip}}</p>
+				<!-- <p>{{station.intersection_directions}}</p> -->
+			</div>
+		</div>
+	</div>
+</div>

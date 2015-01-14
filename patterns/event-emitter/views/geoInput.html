@@ -1,0 +1,19 @@
+<div>
+	<label>Street: </label>
+	<input class="form-control" type="text" ng-model="address.street">
+	<div class="row">
+		<div class="col-md-5">
+			<label>City: </label>
+			<input class="form-control" type="text" ng-model="address.city">
+		</div>
+		<div class="col-md-2">
+			<label>State: </label>
+			<input class="form-control" type="text" ng-model="address.state">
+		</div>
+		<div class="col-md-5">
+			<label>Zip: </label>
+			<input class="form-control" type="text" ng-model="address.zip">
+		</div>
+	</div>
+	<button class="btn btn-success btn-block" ng-click="getLocal(address)">Get Local</button>  
+</div>

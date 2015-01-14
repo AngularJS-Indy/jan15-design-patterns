@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js"> 
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"> -->
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+  <body ng-app="app">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn btn-primary" ui-sref="standard-mvc" ui-sref-active="active">Standard MVC</button>
+                <button class="btn btn-primary" ui-sref="split-mvc" ui-sref-active="active">Split MVC</button>
+                <button class="btn btn-primary" ui-sref="event-emitter" ui-sref-active="active">Event Emitter</button>
+                <button class="btn btn-primary" ui-sref="builder" ui-sref-active="active">Builder (with some other stuff..)</button>
+            </div>
+        </div>
+        <div ui-view=""></div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key= "></script> <!-- add google api here -->
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+    <script src="constants.js"></script>
+    <script src="app.js"></script>
+
+    <script src="patterns/mvc/js/mvc.controller.js"></script>
+    <script src="patterns/mvc/js/mvc.service.js"></script>
+    <script src="patterns/mvc/js/mvc.directives.js"></script>
+
+    <script src="patterns/event-emitter/js/event.directives.js"></script>
+    <script src="patterns/event-emitter/js/event.service.js"></script>
+
+    <script src="patterns/builder/js/builder.directives.js"></script>
+    <script src="patterns/builder/js/builder.factory.js"></script>
+    <script src="patterns/builder/js/builder.service.js"></script>
+
+</body>
+</html>

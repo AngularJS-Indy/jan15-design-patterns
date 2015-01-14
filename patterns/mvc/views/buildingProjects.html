@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-sm-12">
+		<label>City: </label>
+		<input class="form-control" type="text" ng-model="params.city">
+		<label>State: </label>
+		<input class="form-control" type="text" ng-model="params.state">
+		<button class="btn btn-success btn-block" ng-click="getBuildings(params)">Get High Performance Building Projects</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12" ng-repeat="building in buildings">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<p>{{building.title}}, {{building.score}}</p>
+				<p><a href="{{building.node.url}}">{{building.node.url}}</a></p>
+			</div>
+		</div>
+	</div>
+</div>
